@@ -11,11 +11,17 @@
     String btn = request.getParameter("btn");
 
     double result = 0;
-
+    
     // todo:要実装
     // Utilityクラス内のメソッドを呼んで結果を取得
     // 三角形、長方形のどちらのボタンを押したかを判断し、
     // 押したボタンに対応するメソッドを呼ぶ
+    
+    if ( btn.equals("triangle") ){
+    	result = Utility.getTriangleArea(widthStr,heightStr);
+    }else{
+    	result = Utility.getRectangleArea(widthStr,heightStr);
+    }
 
 %>
 
